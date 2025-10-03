@@ -47,8 +47,8 @@ async function bootstrap() {
   const port = process.env.PORT || 3000;
 
   try {
-    await app.listen(port);
-
+    //await app.listen(port);
+    await app.listen(port, '0.0.0.0');
     checkConfiguration(); // Do this last, so that users will see obvious issues at the end of the startup log without having to scroll up.
 
     Logger.log(`🚀 Backend is running on: http://localhost:${port}`);
